@@ -19,14 +19,20 @@ def create(request):
 def game(request):
     if 'username' not in request.session:
         request.session['username'] = 'New User'
-
+    # check to see if I have started game
+    if 'count' not in request.session:
+        request.session['count'] = 0
+    
     context = {
         'username': request.session['username'],
-        'times': 0
+        'times': request.session['count']
     }
     return render(request, 'game.html', context)
 
 def click(request):
     # Handle click
     return redirect('/game')
-    
+
+def reset(request):
+    # Handle reset
+    return redirect('/game')  
