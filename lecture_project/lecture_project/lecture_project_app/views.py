@@ -31,8 +31,15 @@ def game(request):
 
 def click(request):
     # Handle click
+    request.session['count'] += 1
     return redirect('/game')
 
 def reset(request):
     # Handle reset
+
+    #remove everything from session
+    # request.session.clear()
+
+    #remove one thing from session
+    del request.session['count']
     return redirect('/game')  

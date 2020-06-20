@@ -11,7 +11,7 @@
     <h1>Welcome {{ username }}</h1>
     <p>Let's play a game! Please enter your name.</p>
     <a href="/game">Go to Game</a>
-    <form action="/create" method="post">
+    <form action="/create">
         {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" name="username">
