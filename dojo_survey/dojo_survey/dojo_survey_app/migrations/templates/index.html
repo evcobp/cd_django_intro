@@ -10,6 +10,20 @@
         {% csrf_token %}
         <label for='yourname'>Your Name:</label>
         <input type='text' name='yourname' id='yourname'>
+        Languages: <select name='language'>
+          <option value='python'>Python</option>
+          <option value='c#'>C#</option>
+          <option value='java'>Java</option>
+          <option value='javascript'>JavaScript</option>
+          <option value='c'>C</option>
+        </select>
+        Locations: <select name='location'>
+          <option value='burbank'>Burbank</option>
+          <option value='chicago'>Chicago</option>
+          <option value='dallas'>Dallas</option>
+          <option value='seattle'>Seattle</option>
+          <option value='dc'>DC</option>
+        </select>
         <button>Submit</button>
     </form>
   </body>
