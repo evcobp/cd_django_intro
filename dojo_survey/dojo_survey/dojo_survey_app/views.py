@@ -2,12 +2,12 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'form.html')
 
 def results(request):
-    if request.method =='POST':
+    if request.method == 'POST':
         context = {
-            'yourname': request.POST['yourname'],
+            'name': request.POST['name'],
             'lang': request.POST['location'],
             'loc': request.POST['language']
         }
