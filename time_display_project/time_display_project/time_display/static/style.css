@@ -1,0 +1,12 @@
+p {
+    display: inline-block;
+    margin-left: 500px;
+    border: 2px solid black;
+    padding: 0px 30px 30px 30px;
+}
+
+h1 {
+    margin: 0px 350px 0px 350px;
+    border: 2px solid black;
+    padding: 0px 50px 0px 50px;
+}
