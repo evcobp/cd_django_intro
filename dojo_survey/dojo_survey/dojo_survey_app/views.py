@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 def index(request):
     return render(request, 'form.html')
 
-def results(request):
+def process(request):
     if request.method == 'POST':
         context = {
             'name': request.POST['name'],
