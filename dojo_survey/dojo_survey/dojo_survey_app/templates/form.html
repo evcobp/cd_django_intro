@@ -3,28 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'style.css' %}"
     <title>Dojo Survey Index</title>
   </head>
   <body>
-    <h1>Fill out the form</h1>
-    <form action='/process' method='POST'>
-        {% csrf_token %}
-        Name: <input type='text' name='name'>
-        Languages: <select name='language'>
-          <option value='python'>Python</option>
-          <option value='c#'>C#</option>
-          <option value='java'>Java</option>
-          <option value='javascript'>JavaScript</option>
-          <option value='c'>C</option>
-        </select>
-        Locations: <select name='location'>
-          <option value='burbank'>Burbank</option>
-          <option value='chicago'>Chicago</option>
-          <option value='dallas'>Dallas</option>
-          <option value='seattle'>Seattle</option>
-          <option value='dc'>DC</option>
-        </select>
-        <input type='submit' value='View User'>
-    </form>
+    <div class='container'>
+      <h1>Fill out the form</h1>
+        <form action='/process' method='POST'>
+          {% csrf_token %}
+            Name: <input type='text' name='name'><br><br>
+            Languages: <select name='language'>
+              <option value='python'>Python</option>
+              <option value='c#'>C#</option>
+              <option value='java'>Java</option>
+              <option value='javascript'>JavaScript</option>
+              <option value='c'>C</option>
+            </select><br><br>
+            Locations: <select name='location'>
+              <option value='burbank'>Burbank</option>
+              <option value='chicago'>Chicago</option>
+              <option value='dallas'>Dallas</option>
+              <option value='seattle'>Seattle</option>
+              <option value='dc'>DC</option>
+            </select><br><br>
+            <input class='view-user' type='submit' value='View User'>
+        </form>
+    </div>
   </body>
 </html>
